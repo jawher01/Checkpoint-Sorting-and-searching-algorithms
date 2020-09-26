@@ -1,0 +1,18 @@
+ALGORITHM algorithm_name
+VAR
+    i,j,n,v :INTEGER;
+ tab : ARRAY_OF INTEGER[50];
+ 
+BEGIN
+// n taille de tab
+ FOR i FROM 1 TO n STEP 1  DO
+     v:=tab[i];
+     j:=i;
+     WHILE (tab[j-1]>v) DO
+         tab[j]:=tab[j-1];
+         j:=j-1;
+     END_WHILE
+     tab[j]:=v;
+ END_FOR
+    
+END
